@@ -60,4 +60,22 @@ public class MaximumTest {
         String result = Maximum.printGenrictest("apple","peach","banana");
         Assert.assertEquals("banana",result);
     }
+
+    @Test
+    public void toUseGenricClassFindMaximumInteger() {
+       int result =  Maximum.printGenric(12,4,16);
+        Assert.assertEquals(16,result);
+    }
+
+    @Test
+    public void toUseClassFindMaximumFloat() {
+       float result =  Maximum.printGenric(12.5f,4.5f,16.4f);
+       Assert.assertEquals(16.4f,result,0.0);
+    }
+
+    @Test
+    public void toUseClassFindMaximumString() {
+      String result =  Maximum.printGenric("apple","banana","peach");
+      Assert.assertEquals("banana",result);
+    }
 }
