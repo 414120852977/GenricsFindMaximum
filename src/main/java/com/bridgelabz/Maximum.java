@@ -1,5 +1,7 @@
 package com.bridgelabz;
 
+import java.util.Arrays;
+
 public class Maximum<T extends Comparable<T>> {
 T a,b,c;
 
@@ -37,7 +39,28 @@ T a,b,c;
         return max;
     }
 
+    public static <T extends Comparable<T>> T  maxParmeters(T... elements) {
+            int i = 0;
+        T max = elements[i];
+          for(T e : elements){
+              if(elements[1].compareTo(max)>0) {
+                  max = elements[1];
+              }
+              if(elements[2].compareTo(max)>0) {
+                  max = elements[2];
+              }
+              if(elements[3].compareTo(max)>0) {
+                  max = elements[3];
+              }
+              if(elements[4].compareTo(max)>0) {
+                  max = elements[4];
+              }
+          }
+          return  max;
+    }
+
     private static <T extends  Comparable<T>> void printGenric(T a, T b, T c, T max) {
         System.out.println("maximum value is :"+max);
     }
+
 }

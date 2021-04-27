@@ -78,4 +78,10 @@ public class MaximumTest {
       String result =  Maximum.printGenric("apple","banana","peach");
       Assert.assertEquals("banana",result);
     }
+
+    @Test
+    public void maxParametersShowsMaximum() {
+     int result = Maximum.maxParmeters(2,1,77,66,9);
+     Assert.assertEquals(77,result);
+    }
 }
