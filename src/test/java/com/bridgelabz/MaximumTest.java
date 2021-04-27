@@ -24,4 +24,22 @@ public class MaximumTest {
         int result = Maximum.printGenric(2,8,9);
         Assert.assertEquals(9,result);
     }
+
+    @Test
+    public void givenFloatShouldGivesMaximumValueFirstPlace() {
+        float result = Maximum.printGenric(3.5f,1.5f,1.1f);
+        Assert.assertEquals(2.5f,result,0.0);
+    }
+
+    @Test
+    public void givenFloatShouldGivesMaximumValueSecondPlace() {
+        float result = Maximum.printGenric(2.5f,3.5f,1.1f);
+        Assert.assertEquals(3.5f,result,0.0);
+    }
+
+    @Test
+    public void givenFloatShouldGivesMaximumValueThirdPlace() {
+        float result = Maximum.printGenric(2.5f,2.6f,3.5f);
+        Assert.assertEquals(3.5f,result,0.0);
+    }
 }
