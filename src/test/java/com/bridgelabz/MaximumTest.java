@@ -12,4 +12,16 @@ public class MaximumTest {
         int result = Maximum.printGenric(9,2,8);
         Assert.assertEquals(9,result);
     }
+
+    @Test
+    public void givenIntegershouldGivesMaximumAtSecondPlace() {
+        int result = Maximum.printGenric(2,9,8);
+        Assert.assertEquals(9,result);
+    }
+
+    @Test
+    public void givenIntegershouldGivesMaximumAtThirdPlace() {
+        int result = Maximum.printGenric(2,8,9);
+        Assert.assertEquals(9,result);
+    }
 }
