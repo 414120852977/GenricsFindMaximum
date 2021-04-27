@@ -42,4 +42,22 @@ public class MaximumTest {
         float result = Maximum.printGenric(2.5f,2.6f,3.5f);
         Assert.assertEquals(3.5f,result,0.0);
     }
+
+    @Test
+    public void givenStringShouldGivesMaximumValueFirstPlace() {
+        Comparable result = Maximum.printGenrictest("banana","peach","apple");
+        Assert.assertEquals("banana",result);
+    }
+
+    @Test
+    public void givenStringShouldGivesMaximumValueSecondPlace() {
+        Comparable result = Maximum.printGenrictest("apple","banana","peach");
+        Assert.assertEquals("banana",result);
+    }
+
+    @Test
+    public void givenStringShouldGivesMaximumValueThirdPlace() {
+        Comparable result = Maximum.printGenrictest("apple","peach","banana");
+        Assert.assertEquals("banana",result);
+    }
 }
