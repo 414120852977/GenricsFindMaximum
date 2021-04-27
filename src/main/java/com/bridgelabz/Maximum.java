@@ -1,9 +1,19 @@
 package com.bridgelabz;
 
-public class Maximum {
+public class Maximum<T extends Comparable<T>> {
+T a,b,c;
 
+    public Maximum(T a, T b, T c) {
+        this.a = a;
+        this.b = b;
+        this.c = c;
+    }
 
-    public  static <T extends  Comparable<T>> T printGenric(T a, T b, T c) {
+    public  T printGenric() {
+        return Maximum.printGenric(a,b,c);
+    }
+
+    public static <T extends  Comparable<T>> T printGenric(T a, T b, T c) {
         T max = a;
         if(b.compareTo(max)>0) {
             max = b;
@@ -27,12 +37,7 @@ public class Maximum {
         return max;
     }
 
-
-
     private static <T extends  Comparable<T>> void printGenric(T a, T b, T c, T max) {
         System.out.println("maximum value is :"+max);
     }
-
-
-
 }

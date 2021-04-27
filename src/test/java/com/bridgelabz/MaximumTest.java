@@ -57,7 +57,7 @@ public class MaximumTest {
 
     @Test
     public void givenStringShouldGivesMaximumValueThirdPlace() {
-        Comparable result = Maximum.printGenrictest("apple","peach","banana");
+        String result = Maximum.printGenrictest("apple","peach","banana");
         Assert.assertEquals("banana",result);
     }
 }
